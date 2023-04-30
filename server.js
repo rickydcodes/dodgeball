@@ -3,7 +3,7 @@ const handler = require("./handler.js");
 const socket = require("socket.io");
 const app = express();
 
-const listener = app.listen(process.env.PORT);
+const listener = app.listen(process.env.PORT || 57478);
 const io = new socket.Server(listener);
 
 let players = {};
