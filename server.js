@@ -6,15 +6,6 @@ const app = express();
 const listener = app.listen(process.env.PORT || 57478);
 const io = new socket.Server(listener);
 
-let players = {};
-let balls = {};
-let messages = [];
-
-let movementSpeedX = 36;
-let movementSpeedY = 48;
-let boundsWidth = 648;
-let boundsHeight = 384;
-
 app.use(express.static("src"));
 app.use(express.urlencoded({
     extended: true
